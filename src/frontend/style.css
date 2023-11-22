@@ -1,0 +1,87 @@
+:root {
+    --body-color: #191D20;
+    --text-primary-color: #ffffff;
+    --text-second-color: #ac8051;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--body-color);
+}
+
+/*Logo Barber alinhada ao centro e seu tamanho*/
+.logo img{
+    padding: 5px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    
+}
+/*Cor do background do menu*/
+.menu{
+    background-color: #ac8051;
+    width: 100%;
+    opacity: 0.8;
+
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
+    
+}
+
+/*Cor do texto do menu*/
+.menu ul li a{
+    color: var(--text-primary-color);
+    padding: 10px;
+    margin-right: 150px;
+    
+}
+
+nav ul{
+    list-style: none;   
+}
+
+.item-menu-left,
+.item-menu-right{
+
+    display: flex;
+    align-items: center;
+    position: fixed; /*Terá possição fixa*/
+    top: 25px;  /*Distancia do top*/
+}
+
+.item-menu-left{    
+    justify-content:flex-start;
+}
+
+.item-menu-right{
+    
+    justify-content: flex-end;
+    left: 1090px; /*Espaçamento do segundo itens da esquerda para a direita*/
+}
+
+.item-menu-left li:first-child {
+    margin-right: 200px;
+    margin-left: 230px;
+}
+
+.item-menu-right li:first-child{
+    margin-right: 200px;
+    margin-left: 230px;
+}
+
+
+nav ul li a:hover {
+    color: var(--body-color);
+}
