@@ -15,19 +15,38 @@ html, body{
     background-color: var(--body-color);
 }
 
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;  /*Ajusta autora da imagem*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.background-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+
 /*Logo Barber alinhada ao centro e seu tamanho*/
 .logo img{
     padding: 5px;
     height: 100px;
     display: block;
     margin: auto;
-    
+   
 }
 /*Cor do background do menu*/
 .menu{
-    background-color: #ac8051;
+    background-color: var(--body-color);
     width: 100%;
-    opacity: 0.8;
+    opacity: .7; /*Opacidade do menu*/
 
 
     align-items: center;
@@ -46,6 +65,7 @@ html, body{
     padding: 10px;
     margin-right: 150px;
     
+    
 }
 
 nav ul{
@@ -59,6 +79,7 @@ nav ul{
     align-items: center;
     position: fixed; /*Terá possição fixa*/
     top: 25px;  /*Distancia do top*/
+    opacity: 1;
 }
 
 .item-menu-left{    
@@ -83,5 +104,5 @@ nav ul{
 
 
 nav ul li a:hover {
-    color: var(--body-color);
+    color: var(--text-second-color);
 }
