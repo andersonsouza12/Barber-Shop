@@ -2,10 +2,13 @@
     --body-color: #191D20;
     --text-primary-color: #ffffff;
     --text-second-color: #ac8051;
+    --text-third-color: #294e6b;
+
 }
 
 html, body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:sans-serif;
+    font-weight: 600;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -47,7 +50,7 @@ html, body{
     background-color: var(--body-color);
     width: 100%;
     opacity: .7; /*Opacidade do menu*/
-
+    
 
     align-items: center;
     justify-content: space-between;
@@ -64,6 +67,9 @@ html, body{
     color: var(--text-primary-color);
     padding: 10px;
     margin-right: 150px;
+    text-decoration: none;
+    z-index: 1;
+    
     
     
 }
@@ -94,15 +100,145 @@ nav ul{
 
 .item-menu-left li:first-child {
     margin-right: 200px;
-    margin-left: 230px;
+    margin-left: 250px;
 }
 
 .item-menu-right li:first-child{
     margin-right: 200px;
-    margin-left: 230px;
+    margin-left: 500px;
 }
 
 
 nav ul li a:hover {
     color: var(--text-second-color);
+}
+
+/*Final do menu com imagem e logo*/
+/*Informaçoes do whats e alinhamento*/
+.text-background-img{
+    z-index: 3;
+}
+
+.text-background-img h1 {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 250px;
+}
+
+.text-background-img h1:first-child{
+    color: var(--text-primary-color);
+    margin-top: 250px;
+    left: 47%;
+    text-shadow: 0.1em 0.1em 0.2em var(--text-primary-color);
+}
+
+.text-background-img h1:last-child{
+    color: var(--text-second-color);
+    margin-top: 300px;
+    left: 48%;
+    text-shadow: 0.1em 0.1em 0.2em var(--text-second-color);
+}
+
+.information-barber-whats{
+    z-index: 3;
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-primary-color);
+}
+
+.whatssap img{
+    width: 10%;   /*Tamanho do icone */
+    filter: contrast(0);
+      
+}
+
+.information-barber-whats h3,
+.information-barber-whats h4{
+    position: absolute;
+    margin: 5px;
+    margin-left: -200px;
+}
+
+.information-barber-whats h3{
+    margin-top: 0; /*Ajuste do texto para cima*/
+    color: var(--text-second-color);
+}
+
+.information-barber-whats h4{
+    margin-top: 30px; /*Ajuste do texto para cima*/
+    color: var(--text-primary-color);
+}
+
+/*Alinhamento do local*/
+
+.information-barber-locale{
+    z-index: 3;
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 49%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-primary-color);
+}
+
+.locale img{
+    width: 10%;   /*Tamanho do icone */
+    filter: contrast(0);
+      
+}
+
+.information-barber-locale h3,
+.information-barber-locale h4{
+    position: absolute;
+    margin-left: -200px;
+}
+
+.information-barber-locale h3{
+    margin-top: 0; /*Ajuste do texto para cima*/
+    color: var(--text-second-color);
+}
+
+.information-barber-locale h4{
+    margin-top: 30px; /*Ajuste do texto para cima*/
+    color: var(--text-primary-color);
+}
+
+
+.information-barber-open-hours{
+    z-index: 3;
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-primary-color);
+}
+
+.open-hours img{
+    width: 10%;   /*Tamanho do icone */
+    filter: contrast(0);
+}
+
+.information-barber-open-hours h3,
+.information-barber-open-hours h4 {
+    position: absolute;
+    margin-left: -200px;
+}
+
+.information-barber-open-hours h3 {
+    margin-top: 0; /*Ajuste do texto para cima*/
+    color: var(--text-second-color);
+}
+
+.information-barber-open-hours h4{
+    margin-top: 30px; /*Ajuste do texto para cima*/
+    color: var(--text-primary-color);
 }
