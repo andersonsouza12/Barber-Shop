@@ -245,3 +245,17 @@ nav ul li a:hover {
     color: var(--text-primary-color);
 
 }
+
+
+/*Imagens da Barber Shop*/
+
+.img-Barber{
+    margin-top: 10px;
+}
+
+.imgSobre-1 img{
+    z-index: 4;
+    margin-top: 800px;
+    margin-left: 13%;
+    border-radius: 24px;
+}
