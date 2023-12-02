@@ -17,48 +17,34 @@ html, body{
     box-sizing: border-box;
     background-color: var(--body-color);
 }
-
-.background-img {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Imagem do background do site*/
+.background-img img{
     width: 100%;
-    height: 650px;  /*Ajusta autora da imagem*/
+    height: 750px;  /*Ajusta autora da imagem*/
     overflow: hidden;
     display: flex;
     justify-content: center;
-}
-
-.background-img img{
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    z-index: -1;
-    
+    z-index: 3;
 }
 
 /*Logo Barber alinhada ao centro e seu tamanho*/
 .logo img{
-    padding: 5px;
-    height: 100px;
+    
+    height: 150px;
     display: block;
     margin: auto;
    
 }
+
 /*Cor do background do menu*/
 .menu{
     background-color: var(--body-color);
-    width: 100%;
     opacity: .7; /*Opacidade do menu*/
-    
-
     align-items: center;
+    padding: 30px;   /*Tamanho do background do menu*/
     justify-content: space-between;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    
+    margin-top: -30%;   /*Ajuste do menu ao top*/
     
 }
 
@@ -68,10 +54,7 @@ html, body{
     padding: 10px;
     margin-right: 150px;
     text-decoration: none;
-    z-index: 1;
-    
-    
-    
+      
 }
 
 nav ul{
@@ -80,22 +63,20 @@ nav ul{
 
 .item-menu-left,
 .item-menu-right{
-
     display: flex;
     align-items: center;
-    position: fixed; /*Terá possição fixa*/
-    top: 25px;  /*Distancia do top*/
-    opacity: 1;
+    
 }
 
-.item-menu-left{    
-    justify-content:flex-start;
+.item-menu-left{
+    /*justify-content: flex-start;*/
+    margin-top: -100px;
 }
 
 .item-menu-right{
-    
+    margin-top: -30px;
     justify-content: flex-end;
-    left: 1090px; /*Espaçamento do segundo itens da esquerda para a direita*/
+    margin-right: 300px; /*Espaçamento do Elemento da direita para a esquerda*/
 }
 
 .item-menu-left li:first-child {
@@ -115,34 +96,27 @@ nav ul li a:hover {
 
 /*Final do menu com imagem e logo*/
 /*Informaçoes do whats e alinhamento*/
-.text-background-img{
-    z-index: 3;
-}
 
 .text-background-img h1 {
     position: absolute;
     text-transform: uppercase;
     font-weight: 800;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 250px;
-}
-
-.text-background-img h1:first-child{
     color: var(--text-primary-color);
-    margin-top: 250px;
+    margin-top: 150px;
     left: 47%;
     text-shadow: 0.1em 0.1em 0.2em var(--text-primary-color);
 }
 
 .text-background-img h1:last-child{
     color: var(--text-second-color);
-    margin-top: 300px;
+    margin-top: 200px;
     left: 48%;
     text-shadow: 0.1em 0.1em 0.2em var(--text-second-color);
 }
 
 .information-barber-whats{
-    z-index: 3;
+
     position: absolute;
     margin-top: 670px;
     margin-left: 13%;
@@ -178,7 +152,7 @@ nav ul li a:hover {
 /*Alinhamento do local*/
 
 .information-barber-locale{
-    z-index: 3;
+
     position: absolute;
     margin-top: 670px;
     margin-left: 47%;
@@ -190,9 +164,7 @@ nav ul li a:hover {
 
 .locale img{
     width: 10%;   /*Tamanho do icone */
-    filter: contrast(0);
-
-      
+    filter: contrast(0);     
 }
 
 .information-barber-locale h3,
@@ -213,7 +185,7 @@ nav ul li a:hover {
 
 
 .information-barber-open-hours{
-    z-index: 3;
+
     position: absolute;
     margin-top: 670px;
     margin-left: 73%;
@@ -250,12 +222,27 @@ nav ul li a:hover {
 /*Imagens da Barber Shop*/
 
 .img-Barber{
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    
 }
 
-.imgSobre-1 img{
-    z-index: 4;
-    margin-top: 800px;
-    margin-left: 13%;
+
+.imgSobre-1 img,
+.imgSobre-2 img{
+
     border-radius: 24px;
+    width: 950px;
+    margin-top: 770px;
+}
+
+.imgSobre-1 {
+    
+    margin-left: 13%;
+}
+
+.imgSobre-2 {
+    
+    margin-right: 10%;
 }
