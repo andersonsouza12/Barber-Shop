@@ -145,7 +145,7 @@ nav ul li a:hover {
     z-index: 3;
     position: absolute;
     margin-top: 670px;
-    margin-left: 300px;
+    margin-left: 13%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -181,7 +181,7 @@ nav ul li a:hover {
     z-index: 3;
     position: absolute;
     margin-top: 670px;
-    margin-left: 49%;
+    margin-left: 47%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -191,6 +191,7 @@ nav ul li a:hover {
 .locale img{
     width: 10%;   /*Tamanho do icone */
     filter: contrast(0);
+
       
 }
 
@@ -215,7 +216,7 @@ nav ul li a:hover {
     z-index: 3;
     position: absolute;
     margin-top: 670px;
-    margin-left: 75%;
+    margin-left: 73%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -230,7 +231,8 @@ nav ul li a:hover {
 .information-barber-open-hours h3,
 .information-barber-open-hours h4 {
     position: absolute;
-    margin-left: -200px;
+    margin: 5px;
+    margin-left: -150px; /*Distancia dos elementos e a imagem*/
 }
 
 .information-barber-open-hours h3 {
@@ -241,4 +243,5 @@ nav ul li a:hover {
 .information-barber-open-hours h4{
     margin-top: 30px; /*Ajuste do texto para cima*/
     color: var(--text-primary-color);
+
 }
