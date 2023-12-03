@@ -45,6 +45,7 @@ html, body{
     padding: 30px;   /*Tamanho do background do menu*/
     justify-content: space-between;
     margin-top: -30%;   /*Ajuste do menu ao top*/
+    font-size: 20px;
     
 }
 
@@ -106,6 +107,7 @@ nav ul li a:hover {
     margin-top: 150px;
     left: 47%;
     text-shadow: 0.1em 0.1em 0.2em var(--text-primary-color);
+    font-size: 48px;
 }
 
 .text-background-img h1:last-child{
@@ -246,3 +248,56 @@ nav ul li a:hover {
     
     margin-right: 10%;
 }
+
+.title-Services, .title-Sobre{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--text-second-color);
+    font-weight: 800;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+/*Service*/
+
+.menu-service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+
+.menu-item, .menu-item-initial ,
+.menu-item-center, .menu-item-final {
+    background-color: var(--text-primary-color);
+    border: 3px solid var(--text-second-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: -webkit-center;
+    
+}
+
+.menu-item-initial{
+    margin-left: 3%;
+}
+
+.menu-item-final{
+    margin-right: 1%;
+}
+
+h2 {
+    color: var(--text-second-color);
+}
+
+
+p {
+    color:var(--text-third-color);
+    font-size: 14px;
+    margin-top: -2px;
+}
+
