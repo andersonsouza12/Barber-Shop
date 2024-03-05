@@ -1,3 +1,7 @@
+const btnMenu = document.getElementById("btn-menu");
+const menu = document.getElementById('menu-mobile');
+const overlay = document.getElementById('overlay-menu');
+
 function voltarAoTopo() {
     window.scrollTo({
         top: 0,
@@ -34,4 +38,17 @@ window.addEventListener('scroll', function(){
     } else {
         btnTopo.style.display = 'none';
     }
+});
+
+
+btnMenu.addEventListener('click',()=>{
+    menu.classList.add('open-menu');
+});
+
+menu.addEventListener('click', ()=>{
+    menu.classList.remove('open-menu')
+});
+
+overlay.addEventListener('click', ()=>{
+    menu.classList.remove('open-menu')
 });
