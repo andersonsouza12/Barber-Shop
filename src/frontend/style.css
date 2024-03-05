@@ -3,6 +3,7 @@
     --text-primary-color: #ffffff;
     --text-second-color: #ac8051;
     --text-third-color: #294e6b;
+    --overlay-color:  rgba(0, 0, 0, 0.74);
 
 }
 
@@ -12,238 +13,177 @@ html, body{
     font-size: 16px;
     margin: 0;
     padding: 0;
+    position: relative;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     background-color: var(--body-color);
     scroll-behavior: smooth;
 }
-/* Imagem do background do site*/
-.background-img img{
-    width: 100%;
-    height: 750px;  /*Ajusta autora da imagem*/
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
-    z-index: 3;
-}
 
-/*Logo Barber alinhada ao centro e seu tamanho*/
-.logo img{
-    
-    height: 150px;
-    display: block;
-    margin: auto;
-   
+.background-img img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 /*Cor do background do menu*/
-.menu{
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     background-color: var(--body-color);
-    opacity: .7; /*Opacidade do menu*/
-    align-items: center;
-    padding: 30px;   /*Tamanho do background do menu*/
-    justify-content: space-between;
-    margin-top: -30%;   /*Ajuste do menu ao top*/
+    opacity: .7;
     font-size: 20px;
-    
-}
-
-/*Cor do texto do menu*/
-.menu ul li a{
-    color: var(--text-primary-color);
-    padding: 10px;
-    margin-right: 150px;
-    text-decoration: none;
-      
-}
-
-nav ul{
-    list-style: none;   
-}
-
-.item-menu-left,
-.item-menu-right{
     display: flex;
     align-items: center;
-    
+    justify-content: space-between;
+    z-index: 2;
 }
 
-.item-menu-left{
-    /*justify-content: flex-start;*/
-    margin-top: -100px;
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.item-menu-right{
-    margin-top: -30px;
-    justify-content: flex-end;
-    margin-right: 300px; /*Espaçamento do Elemento da direita para a esquerda*/
+.menu .item-menu-left,
+.menu .item-menu-right {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.item-menu-left li:first-child {
-    margin-right: 200px;
-    margin-left: 250px;
+.menu .item-menu-left li,
+.menu .item-menu-right li {
+    margin: 0 80px 0; /* Espaçamento entre os itens do menu */
 }
 
-.item-menu-right li:first-child{
-    margin-right: 200px;
-    margin-left: 500px;
+.menu .item-menu-left li a,
+.menu .item-menu-right li a {
+    text-decoration: none;
+    color: var(--text-primary-color);
 }
 
 
-nav ul li a:hover {
-    color: var(--text-second-color);
+.menu .item-menu-right {
+    margin-right: 10%; /* Ajuste a margem à direita conforme necessário */
 }
 
-/*Final do menu com imagem e logo*/
-/*Informaçoes do whats e alinhamento*/
+.menu .item-menu-left {
+    margin-left: 10%;
+}
 
-.text-background-img h1 {
+/* Estilo para links na lista .item-menu-left */
+.menu .item-menu-left li a:hover {
+    color: red;
+}
+/* Estilo para links na lista .item-menu-right */
+.menu .item-menu-right li a:hover {
+    color: red;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.btn-open-menu img{
+    display: none;
+}
+
+.logo {
     position: absolute;
+    width: 30%; /* Largura da logo em relação ao viewport */
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.text-background-img h1{
+    position:absolute;
     text-transform: uppercase;
     font-weight: 800;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--text-primary-color);
-    margin-top: 150px;
-    left: 47%;
+    left: 45%;
+    top: 20%;
     text-shadow: 0.1em 0.1em 0.2em var(--text-primary-color);
-    font-size: 48px;
+    font-size: 28px;
 }
 
 .text-background-img h1:last-child{
     color: var(--text-second-color);
-    margin-top: 200px;
-    left: 48%;
+    left: 46%;
+    top: 25%;
     text-shadow: 0.1em 0.1em 0.2em var(--text-second-color);
 }
 
-.whatssap img,
-.locale img,
-.open-hours img{
-    width: 10%;   /*Tamanho do icone */
+.whatssap,
+.locale,
+.open-hours{
+    margin-top: 20px;
+    width: 8%;
     filter: contrast(0);
-      
 }
 
-.information-barber-whats{
-
-    position: absolute;
-    margin-top: 670px;
-    margin-left: 20%;
-    display: flex;
+.whatssap,
+.locale,
+.open-hours,
+.text-information{
+    margin-top: 10px;
+    display: inline-block;
     align-items: center;
-    flex-direction: column;
-    color: var(--text-primary-color);
 }
 
+.information-barber{
+    
+    display: flex;
+    margin-left: 200px;
+    justify-content: space-around;
+}
 
+h3,
+h4 {
 
-.information-barber-whats h3,
-.information-barber-whats h4{
-    position: absolute;
     margin: 5px;
-    margin-left: -200px;
+    padding: 1px; /* Ajusta o espaçamento do texto */
+
 }
 
-.information-barber-whats h3{
-    margin-top: 0; /*Ajuste do texto para cima*/
+h3{
     color: var(--text-second-color);
 }
 
-.information-barber-whats h4{
-    margin-top: 30px; /*Ajuste do texto para cima*/
+h4{
     color: var(--text-primary-color);
+    margin-left: 20px;
 }
-
-/*Alinhamento do local*/
-
-.information-barber-locale{
-
-    position: absolute;
-    margin-top: 670px;
-    margin-left: 47%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--text-primary-color);
-}
-
-
-.information-barber-locale h3,
-.information-barber-locale h4{
-    position: absolute;
-    margin-left: -200px;
-}
-
-.information-barber-locale h3{
-    margin-top: 0; /*Ajuste do texto para cima*/
-    color: var(--text-second-color);
-}
-
-.information-barber-locale h4{
-    margin-top: 30px; /*Ajuste do texto para cima*/
-    color: var(--text-primary-color);
-}
-
-
-.information-barber-open-hours{
-
-    position: absolute;
-    margin-top: 670px;
-    margin-left: 73%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--text-primary-color);
-}
-
-
-.information-barber-open-hours h3,
-.information-barber-open-hours h4 {
-    position: absolute;
-    margin: 5px;
-    margin-left: -150px; /*Distancia dos elementos e a imagem*/
-}
-
-.information-barber-open-hours h3 {
-    margin-top: 0; /*Ajuste do texto para cima*/
-    color: var(--text-second-color);
-}
-
-.information-barber-open-hours h4{
-    margin-top: 30px; /*Ajuste do texto para cima*/
-    color: var(--text-primary-color);
-
-}
-
-
-/*Imagens da Barber Shop*/
 
 .img-Barber{
     display: flex;
-    justify-content: space-between;
-    
-    
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-left: 30px;
+
 }
 
-
-.imgSobre-1 img,
-.imgSobre-2 img{
-
-    border-radius: 24px;
-    width: 950px;
-    margin-top: 770px;
-}
-
-.imgSobre-1 {
-    
-    margin-left: 13%;
-}
-
+.imgSobre-1,
 .imgSobre-2 {
     
-    margin-right: 10%;
+    border-radius: 24px;
+    width: 400px;
+    height: 250px;
 }
 
 .title-Services, .title-Sobre{
@@ -253,56 +193,39 @@ nav ul li a:hover {
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 38px;
+    font-size: 28px;
 }
-
 /*Service*/
 
+.img-service-1{
 
-.img-service-1 {
-    
-    width: 100px;
-    height: 50px;
-    margin-left: 10%;
-}
-
-.img-service-1 img{
-    margin: 80px;
-    width: 550px;
-    height: 450px;
+    display: none;
+    margin: 50px;
+    width: 350px;
+    height: 300px;
     margin-top: 10px auto;
-    margin-left: 55%;
+    margin-left: 15%;
     border: 4px solid var(--text-second-color);
     border-radius: 50% 10% 50% 10%;
 }
 
 .menu-service{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: center;
+    align-items: baseline;
     
 }
 
-.menu-item, .menu-item-initial ,
+.menu-item-initial ,
 .menu-item-center, .menu-item-final {
     background-color: var(--text-primary-color);
     border: 3px solid var(--text-second-color);
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
-    width: 300px;
+    width: 250px;
     text-align: -webkit-center;
     
-}
-
-.menu-item-initial{
-    margin-left: 40%;
-}
-
-.menu-item-final{
-    margin-right: 10%;
 }
 
 h2 {
@@ -313,7 +236,6 @@ h2 {
     
 }
 
-
 p {
     color:var(--text-third-color);
     font-size: 14px;
@@ -322,6 +244,9 @@ p {
 }
 
 .button-agendar{
+
+    display: flex;
+    margin-inline: auto;
     background-color: var(--text-second-color);
     color: var(--text-primary-color);
     padding: 10px 40px;
@@ -329,7 +254,6 @@ p {
     border-radius: 5px;
     cursor: pointer;
 
-    margin-left: 63%;
     font-size: 18px;
     margin-top: 20px;
     transition: background 0.3s ease;
@@ -343,35 +267,31 @@ p {
     border-radius: 10px;
     
 }
-.title-Sobre{
 
-    margin-left: 30%;
+.sobre{
+    display: flex;
+    justify-content: space-around;
 }
+
 .img-sobre{
-    width: 100px;
-    height: 50px;
-}
-
-
-.img-sobre img{
-    
-    width: 800px;
-    margin: 50px auto;
-    margin-left: 300px;
-    border-radius: 130px 770px 50px;
+    display: flex;
+    height: 450px;
+    width: 300px;
+    margin: 250px  0 auto;
+    margin-left: 180px;
+    border-radius: 50px;
     border: 3px solid var(--text-second-color);
 }
 
 section{
+
     max-width: 40%;
-    margin: 50px auto;
     margin-right: 13%;
     padding: 20px;
     border: 3px solid var(--text-second-color);
     border-radius: 8px;
     background-color: var(--text-primary-color);
-    
-    
+   
 }
 
 section p{
@@ -409,4 +329,181 @@ footer p{
     filter: brightness(0) invert(1);
     
 }
+
+
+@media screen and (max-width: 1020px) {
+    
+    /*ESTILO DO MENU MOBILE*/
+    .btn-open-menu img{
+        display: block;
+    }
+
+    .btn-open-menu{
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        z-index: 800;
+        position: absolute;
+    }
+    
+    .btn-open-menu img{
+        width: 8%;
+        filter: contrast(0);
+        justify-content: flex-end;
+        padding: 12px 5%; /*Movimenta botão direita para a ezquerda*/
+    }
+
+    .menu-mobile{
+        display: block;
+        background-color: var(--body-color);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width:  0%;
+        overflow: hidden;
+        transition: .5s;
+        
+    }
+
+    .menu-mobile.open-menu{
+        width: 45%;
+    }
+
+    .menu-mobile.open-menu ~ .overlay-menu{
+        display: block;
+    }
+
+    .menu-mobile .btn-closed{
+        width: 10%;
+        filter: contrast(0);
+        padding: 20px 8%;  /*Movimenta o botão fechar*/
+    }
+
+    .menu-mobile nav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        
+        
+    }
+
+    .menu-mobile nav ul li{
+        display: block;
+
+    }
+
+    .menu-mobile nav ul li a{
+        
+        text-decoration: none;
+        color: var(--text-primary-color);
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 12%; /*Espaço do elemento para a borda direita da tela*/
+        display: block;
+        
+    }
+    .menu-mobile nav ul li a:hover{
+        background-color: var(--text-third-color);
+        color: var(--text-second-color);
+    }
+
+    .overlay-menu{
+        background-color: var(--overlay-color);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        display: none;
+    }
+
+    .background-img img{
+        max-height: 30vh;
+    }
+    .menu ul li a, .information-barber{
+        display: none;
+    }
+
+    .menu{
+        height: 50px;
+        align-items: center;
+    }
+    
+    .logo img{
+        max-width: 50%;
+    }
+
+    .text-background-img h1{
+
+        left: 35%;
+        top: 10%;
+        font-size: 28px;
+    }
+    
+    .text-background-img h1:last-child{
+        left: 40%;
+        top: 15%;
+    }
+
+    .whatssap img,
+    .locale img,
+    .open-hours img{
+        width: 70%;   /*Tamanho do icone */
+        filter: contrast(0);
+      
+    }
+
+    .information-barber{
+    
+        justify-content: space-around;
+        align-items: flex-start;               /*align-items: center;*/
+        flex-wrap: wrap;
+        font-size: small;
+    }
+
+    .imgSobre-1,
+    .imgSobre-2 {
+    
+    border-radius: 24px;
+    width: 150px;
+    height: 150px;
+
+    }
+
+    .img-Barber{
+        order: -3;
+    }
+
+    /* SERVICE*/
+    .title-Services, .title-Sobre{
+      
+        font-weight: 300;
+        margin-top: 1px;
+        font-size: 20px;
+    }
+    .menu-service{
+        flex-wrap: wrap;
+        
+    }
+
+    section{
+        max-width: 80%;
+        margin-right: 0;
+    }
+
+    .img-sobre{
+        display: none;
+    }
+
+
+        
+}
+
 
