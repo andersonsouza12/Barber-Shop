@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
 window.addEventListener('scroll', function(){
     const scrollPosition = this.window.scrollY;
 
-    if(scrollPosition > 300) {
+    if(scrollPosition > 300 && this.window.innerWidth > 1020) {
         btnTopo.style.display = 'block';
     } else {
         btnTopo.style.display = 'none';
