@@ -1,0 +1,57 @@
+@import'style.css';
+
+
+.menu-services{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 400px; /* Define a largura máxima do elemento */
+    margin: 100px auto; 
+    border-radius: 10px;
+    background-color: var(--text-primary-color);
+    border: 3px solid var(--text-second-color);
+}
+
+.services{
+    justify-content: center;
+
+}
+.menu-services .services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.menu-services .services{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espaçamento entre os elementos */
+    margin-bottom: 10px; /* Espaçamento entre as linhas */
+}
+
+.menu-services .services h1 {
+    text-transform: uppercase;
+    margin-right: 10px; /* Espaçamento entre o texto e o botão */
+    font-size: 18px;
+}
+
+
+/*Botão agendar e hover*/
+
+.agendar {
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--body-color);
+    background-color: var(--text-second-color);
+    color: var(--text-primary-color);
+    transition: background 0.3s ease;
+}
+.agendar:hover {
+    color: var(--text-second-color);
+    background-color: var(--text-third-color);
+    border: 3px solid var(--text-second-color);
+    border-radius: 10px;
+}
