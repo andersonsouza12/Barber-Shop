@@ -1,6 +1,7 @@
 const btnMenu = document.getElementById("btn-menu");
 const menu = document.getElementById('menu-mobile');
 const overlay = document.getElementById('overlay-menu');
+const btnagendar = document.getElementById('button-agendar');
 
 function voltarAoTopo() {
     window.scrollTo({
@@ -51,4 +52,8 @@ menu.addEventListener('click', ()=>{
 
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('open-menu')
+});
+
+btnagendar.addEventListener('click', function(){
+    window.location.href = 'preco_servico.html';
 });
