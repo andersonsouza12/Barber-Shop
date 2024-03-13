@@ -1,0 +1,36 @@
+@import'../style.css';
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura do container para ocupar toda a altura da tela */
+}
+
+
+.card {
+    background-color: var(--text-primary-color);
+    width: 70px; /* Largura do card */
+    height: 100px; /* Altura do card */
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+    display: flex;
+    flex-direction: column; /* Os elementos dentro do card ficarão um abaixo do outro */
+    justify-content: center; /* Centraliza verticalmente dentro do card */
+    align-items: center; /* Centraliza horizontalmente dentro do card */
+    padding: 10px; /* Adiciona preenchimento interno ao card */
+    margin: 4px; /* Adiciona margem ao redor do card */
+}
+
+.card h5, .card h6 {
+    margin: 5px 12px; /* Ajusta a margem entre os elementos */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card:hover{
+    background-color: var(--hover-day-week);
+    color: var(--text-primary-color);
+}
+
