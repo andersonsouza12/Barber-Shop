@@ -1,12 +1,43 @@
 @import'../style.css';
 
-.container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Define a altura do container para ocupar toda a altura da tela */
+.selected-service{
+    
+    height: 150px;
+    border-bottom: 1px solid var(--text-primary-color);
 }
 
+.selected-service h1{
+    display: flex;
+    margin-left: 150px;
+    margin: 0;
+    color: var(--text-primary-color);
+    padding: 40px 70px;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column;
+    border-bottom: 1px solid var(--text-primary-color);
+    padding-bottom: 50px;
+    
+}
+
+.month-year{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.month-year h1{
+    color: var(--text-primary-color);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .card {
     background-color: var(--text-primary-color);
@@ -33,4 +64,54 @@
     background-color: var(--hover-day-week);
     color: var(--text-primary-color);
 }
+
+.select-hours{
+    height: 150px;
+    border-bottom: 1px solid var(--text-primary-color);
+    padding-bottom: 80px;
+}
+
+.select-hours h1{
+    display: flex;
+    margin-left: 150px;
+    margin: 0;
+    color: var(--text-primary-color);
+    padding: 40px 70px;
+    
+}
+
+
+.card-hours{
+    display: flex;
+    background-color: var(--text-primary-color);
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.card-hours h2{
+    color: var(--text-third-color);
+}
+
+.card-hours:hover{
+    background-color: var(--hover-day-week);
+}
+
+.card-hours:hover h2 {
+    color: var(--text-primary-color);
+}
+
+.cards-hours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 58px; /*adiciona espaçamento dos elemento*/
+    
+}
+
+
 
