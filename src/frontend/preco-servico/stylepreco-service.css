@@ -1,5 +1,13 @@
 @import'../style.css';
 
+
+.logo-barber{
+    width: 120px;
+    height: 120px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
 h2{
     display: flex;
     align-items: center;
@@ -64,4 +72,30 @@ h2{
     background-color: var(--text-third-color);
     border: 3px solid var(--text-second-color);
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1020px){
+
+    .logo-barber{
+        width: 60px;
+        height: 60px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    h2{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .menu-services .services h1 {
+        text-transform: uppercase;
+        margin-right: 20px; /* Espaçamento entre o texto e o botão */
+        font-size: 14px;
+    }
+
+    .agendar {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
 }
