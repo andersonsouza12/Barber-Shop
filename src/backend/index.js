@@ -55,5 +55,5 @@ overlay.addEventListener('click', ()=>{
 });
 
 btnagendar.addEventListener('click', function(){
-    window.location.href = 'preco_servico.html';
+    window.location.href = './preco-servico/preco_servico.html';
 });
