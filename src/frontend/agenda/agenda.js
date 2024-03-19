@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
+document.addEventListener('DOMContentLoaded', function(){
 
+    const currentMonthYearElement = document.getElementById('currentMonthYear');
+    const months = [
+        "Janeiro", "Fevereiro", "Março", "Abril", 
+        "Maio", "junho", "julho", "Agosto", 
+        "Setembro", "outubro", "Novembro", "Dezembro"
+    ];
+    const currentDate = new Date();
+    const currentMonth = months[currentDate.getMonth()];
+    const currentYear = currentDate.getFullYear();
 
-
-
-
-
-const card = document.querySelector('card');
-
-
-card.addEventListener('click', function(){
-    
+    currentMonthYearElement.textContent = `${currentMonth} ${currentYear}`;
 });
