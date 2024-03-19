@@ -15,7 +15,7 @@
     border-bottom: 1px solid var(--text-primary-color);
 }
 
-.selected-service h1{
+#h1{
     display: flex;
     margin-left: 150px;
     margin: 0;
