@@ -75,7 +75,13 @@
     color: var(--text-primary-color);
 }
 
+/*Muda a cor do card ao ser clicado*/
+.card.selected{
+    background-color: var(--hover-day-week);
+}
+
 .select-hours{
+    display: none;
     height: 150px;
     border-bottom: 1px solid var(--text-primary-color);
     padding-bottom: 80px;
@@ -121,6 +127,33 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 58px; /*adiciona espaçamento dos elemento*/
+    
+}
+
+.btn-finalizar{
+
+    display: none;
+    margin-inline: auto;
+    background-color: var(--text-second-color);
+    color: var(--text-primary-color);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px var(--body-color);
+    margin-top: 60px;
+    cursor:not-allowed;
+}
+
+.btn-finalizar:hover{
+    color: var(--text-second-color);
+    background: none;
+    border: 3px solid var(--text-third-color);
+    border-radius: 10px;
     
 }
 
